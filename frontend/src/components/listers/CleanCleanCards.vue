@@ -110,7 +110,7 @@
             
             me.newValue = {
                 'cleanStatus': '',
-                'roomId': 0,
+                'reserveId': 0,
                 'customerId': 0,
             }
         },

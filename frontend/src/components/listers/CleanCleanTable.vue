@@ -68,7 +68,7 @@
                 [
                     { text: "id", value: "id" },
                     { text: "cleanStatus", value: "cleanStatus" },
-                    { text: "roomId", value: "roomId" },
+                    { text: "reserveId", value: "reserveId" },
                     { text: "customerId", value: "customerId" },
                 ],
             clean : [],
@@ -88,7 +88,7 @@
 
             this.newValue = {
                 'cleanStatus': '',
-                'roomId': 0,
+                'reserveId': 0,
                 'customerId': 0,
             }
         },

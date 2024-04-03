@@ -20,7 +20,7 @@ public class Clean {
 
     private String cleanStatus;
 
-    private Long roomId;
+    private Long reserveId;
 
     private Long customerId;
 

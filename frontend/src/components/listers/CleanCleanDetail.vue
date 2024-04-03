@@ -9,7 +9,7 @@
                 <String label="CleanStatus" v-model="item.cleanStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="RoomId" v-model="item.roomId" :editMode="editMode" @change="change" />
+                <Number label="ReserveId" v-model="item.reserveId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />

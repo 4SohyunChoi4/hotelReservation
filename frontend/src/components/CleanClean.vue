@@ -17,7 +17,7 @@
 
         <v-card-text>
             <String label="CleanStatus" v-model="value.cleanStatus" :editMode="editMode" :inputUI="''"/>
-            <Number label="RoomId" v-model="value.roomId" :editMode="editMode" :inputUI="''"/>
+            <Number label="ReserveId" v-model="value.reserveId" :editMode="editMode" :inputUI="''"/>
             <Number label="CustomerId" v-model="value.customerId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

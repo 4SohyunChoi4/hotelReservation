@@ -18,7 +18,7 @@
                                 CleanStatus :  {{item.cleanStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                RoomId :  {{item.roomId }}
+                                ReserveId :  {{item.reserveId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 CustomerId :  {{item.customerId }}

@@ -39,7 +39,7 @@ mvn spring-boot:run
 ```
 - clean
 ```
- http :8088/cleans id="id" cleanStatus="cleanStatus" roomId="roomId" customerId="customerId" 
+ http :8088/cleans id="id" cleanStatus="cleanStatus" reserveId="reserveId" customerId="customerId" 
 ```
 - hotelRoom
 ```

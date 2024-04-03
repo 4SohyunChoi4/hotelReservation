@@ -49,7 +49,7 @@
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CleanStatus :  {{data.cleanStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ RoomId :  {{data.roomId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReserveId :  {{data.reserveId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CustomerId :  {{data.customerId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -119,7 +119,7 @@
             
             this.newValue = {
                 'cleanStatus': '',
-                'roomId': 0,
+                'reserveId': 0,
                 'customerId': 0,
             }
         },
