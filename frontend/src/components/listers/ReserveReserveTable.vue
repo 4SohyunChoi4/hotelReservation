@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "roomType", value: "roomType" },
                     { text: "status", value: "status" },
+                    { text: "userId", value: "userId" },
                 ],
             reserve : [],
             newValue: {},
@@ -88,6 +89,7 @@
             this.newValue = {
                 'roomType': '',
                 'status': '',
+                'userId': '',
             }
         },
         methods: {

@@ -11,5 +11,5 @@ public class OutOfStock extends AbstractEvent {
 
     private Long id;
     private Long roomQty;
-    private String reserveId;
+    private Long reserveId;
 }

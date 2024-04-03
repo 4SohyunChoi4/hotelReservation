@@ -23,6 +23,8 @@ public class Reserve {
 
     private String status;
 
+    private String userId;
+
     @PostPersist
     public void onPostPersist() {
         HotelReserved hotelReserved = new HotelReserved(this);

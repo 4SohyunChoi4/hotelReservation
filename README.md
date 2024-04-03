@@ -39,7 +39,7 @@ mvn spring-boot:run
 ```
 - reserve
 ```
- http :8088/reserves id="id" roomType="roomType" status="status" 
+ http :8088/reserves id="id" roomType="roomType" status="status" userId="userId" 
 ```
 - notify
 ```

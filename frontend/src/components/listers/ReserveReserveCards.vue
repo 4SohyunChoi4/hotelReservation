@@ -111,6 +111,7 @@
             me.newValue = {
                 'roomType': '',
                 'status': '',
+                'userId': '',
             }
         },
         methods:{
