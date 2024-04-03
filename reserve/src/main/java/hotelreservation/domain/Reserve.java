@@ -23,7 +23,7 @@ public class Reserve {
 
     private String status;
 
-    private String userId;
+    private Long roomId;
 
     @PostPersist
     public void onPostPersist() {

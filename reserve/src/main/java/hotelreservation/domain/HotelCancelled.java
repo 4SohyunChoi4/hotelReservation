@@ -14,6 +14,7 @@ public class HotelCancelled extends AbstractEvent {
     private Long id;
     private String roomType;
     private String status;
+    private Long roomId;
 
     public HotelCancelled(Reserve aggregate) {
         super(aggregate);

@@ -21,7 +21,7 @@
                                 Status :  {{item.status }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                UserId :  {{item.userId }}
+                                RoomId :  {{item.roomId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

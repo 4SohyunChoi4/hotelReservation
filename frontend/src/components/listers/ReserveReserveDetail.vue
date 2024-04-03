@@ -12,7 +12,7 @@
                 <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+                <Number label="RoomId" v-model="item.roomId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

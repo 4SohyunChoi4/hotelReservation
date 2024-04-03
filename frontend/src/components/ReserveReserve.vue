@@ -18,7 +18,7 @@
         <v-card-text>
             <String label="RoomType" v-model="value.roomType" :editMode="editMode" :inputUI="''"/>
             <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
-            <String label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
+            <Number label="RoomId" v-model="value.roomId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
