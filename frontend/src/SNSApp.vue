@@ -36,18 +36,6 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
-                        key="points"
-                        to="/points/points"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        Point
-                    </v-list-item>
-
-
-                    <v-list-item
-                        class="px-2"
                         key="reserves"
                         to="/reserves/reserves"
                         @click="changeUrl()"
@@ -60,13 +48,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="notifies"
-                        to="/notifies/notifies"
+                        key="cleans"
+                        to="/cleans/cleans"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Notify
+                        Clean
                     </v-list-item>
 
 
@@ -80,6 +68,7 @@
                     >
                         HotelRoom
                     </v-list-item>
+
 
 
                 </v-list>
@@ -161,13 +150,6 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
-                title: 'Point', 
-                description: '', 
-                key: 'points', 
-                route: '/points/points',
-                ImageUrl: '',
-            },
-            { 
                 title: 'Reserve', 
                 description: '', 
                 key: 'reserves', 
@@ -175,10 +157,10 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Notify', 
+                title: 'Clean', 
                 description: '', 
-                key: 'notifies', 
-                route: '/notifies/notifies',
+                key: 'cleans', 
+                route: '/cleans/cleans',
                 ImageUrl: '',
             },
             { 

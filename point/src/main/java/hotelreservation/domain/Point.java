@@ -1,7 +1,8 @@
 package hotelreservation.domain;
 
 import hotelreservation.PointApplication;
-import hotelreservation.domain.PointUsed;
+import hotelreservation.domain.PointGained;
+import hotelreservation.domain.PointReturned;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -18,12 +19,17 @@ public class Point {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String userId;
+
     private Long point;
 
     @PostPersist
     public void onPostPersist() {
-        PointUsed pointUsed = new PointUsed(this);
-        pointUsed.publishAfterCommit();
+        PointGained pointGained = new PointGained(this);
+        pointGained.publishAfterCommit();
+
+        PointReturned pointReturned = new PointReturned(this);
+        pointReturned.publishAfterCommit();
     }
 
     public static PointRepository repository() {
@@ -41,8 +47,8 @@ public class Point {
         Point point = new Point();
         repository().save(point);
 
-        PointUsed pointUsed = new PointUsed(point);
-        pointUsed.publishAfterCommit();
+        PointGained pointGained = new PointGained(point);
+        pointGained.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -52,8 +58,8 @@ public class Point {
             point // do something
             repository().save(point);
 
-            PointUsed pointUsed = new PointUsed(point);
-            pointUsed.publishAfterCommit();
+            PointGained pointGained = new PointGained(point);
+            pointGained.publishAfterCommit();
 
          });
         */
@@ -69,6 +75,8 @@ public class Point {
         Point point = new Point();
         repository().save(point);
 
+        PointReturned pointReturned = new PointReturned(point);
+        pointReturned.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -78,6 +86,8 @@ public class Point {
             point // do something
             repository().save(point);
 
+            PointReturned pointReturned = new PointReturned(point);
+            pointReturned.publishAfterCommit();
 
          });
         */

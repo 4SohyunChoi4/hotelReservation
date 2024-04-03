@@ -45,13 +45,12 @@ templateFiles.keys().forEach(function(tempFiles) {
 Vue.use(Managing);
 const pluralCaseList = []
 
-pluralCaseList.push( {plural: "points/points", pascal: "PointPoint"} )
-
 pluralCaseList.push( {plural: "reserves/reserves", pascal: "ReserveReserve"} )
 
-pluralCaseList.push( {plural: "notifies/notifies", pascal: "NotifyNotify"} )
+pluralCaseList.push( {plural: "cleans/cleans", pascal: "CleanClean"} )
 
 pluralCaseList.push( {plural: "hotelRooms/hotelRooms", pascal: "HotelRoomHotelRoom"} )
+
 
 
 Vue.prototype.$ManagerLists.forEach(function(item, idx) {

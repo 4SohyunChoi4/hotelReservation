@@ -15,7 +15,13 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
+                                CleanStatus :  {{item.cleanStatus }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
                                 RoomId :  {{item.roomId }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                CustomerId :  {{item.customerId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -68,6 +74,10 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
+                    
+                    
                     
                     
                     

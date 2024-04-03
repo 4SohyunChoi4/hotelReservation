@@ -9,22 +9,22 @@ spring:
     gateway:
 #<<< API Gateway / Routes
       routes:
-        - id: point
+        - id: reserve
           uri: http://localhost:8082
           predicates:
-            - Path=/points/**, 
-        - id: reserve
+            - Path=/reserves/**, 
+        - id: clean
           uri: http://localhost:8083
           predicates:
-            - Path=/reserves/**, 
-        - id: notify
+            - Path=/cleans/**, 
+        - id: hotelRoom
           uri: http://localhost:8084
           predicates:
-            - Path=/notifies/**, 
-        - id: hotelRoom
+            - Path=/hotelRooms/**, 
+        - id: customerCenter
           uri: http://localhost:8085
           predicates:
-            - Path=/hotelRooms/**, 
+            - Path=, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -49,22 +49,22 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: point
-          uri: http://point:8080
-          predicates:
-            - Path=/points/**, 
         - id: reserve
           uri: http://reserve:8080
           predicates:
             - Path=/reserves/**, 
-        - id: notify
-          uri: http://notify:8080
+        - id: clean
+          uri: http://clean:8080
           predicates:
-            - Path=/notifies/**, 
+            - Path=/cleans/**, 
         - id: hotelRoom
           uri: http://hotelRoom:8080
           predicates:
             - Path=/hotelRooms/**, 
+        - id: customerCenter
+          uri: http://customerCenter:8080
+          predicates:
+            - Path=, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

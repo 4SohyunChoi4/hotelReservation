@@ -109,7 +109,9 @@
             me.values = temp.data._embedded.cleans;
             
             me.newValue = {
-                'roomId': '',
+                'cleanStatus': '',
+                'roomId': 0,
+                'customerId': 0,
             }
         },
         methods:{

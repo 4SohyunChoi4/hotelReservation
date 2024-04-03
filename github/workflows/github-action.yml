@@ -29,21 +29,11 @@ jobs:
       
       - name: Build Maven Projects
         run: |
-          mvn clean package -f ./point/pom.xml
           mvn clean package -f ./reserve/pom.xml
-          mvn clean package -f ./notify/pom.xml
+          mvn clean package -f ./clean/pom.xml
           mvn clean package -f ./hotelRoom/pom.xml
+          mvn clean package -f ./customerCenter/pom.xml
 
-      - name: Docker Build and push for Point
-        uses: docker/build-push-action@v4
-        with:
-          context: ./point
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository }}/point:latest
-            ghcr.io/${{ github.repository }}/point:${{ github.ref_name }}
-            
       - name: Docker Build and push for Reserve
         uses: docker/build-push-action@v4
         with:
@@ -54,15 +44,15 @@ jobs:
             ghcr.io/${{ github.repository }}/reserve:latest
             ghcr.io/${{ github.repository }}/reserve:${{ github.ref_name }}
             
-      - name: Docker Build and push for Notify
+      - name: Docker Build and push for Clean
         uses: docker/build-push-action@v4
         with:
-          context: ./notify
+          context: ./clean
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/notify:latest
-            ghcr.io/${{ github.repository }}/notify:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/clean:latest
+            ghcr.io/${{ github.repository }}/clean:${{ github.ref_name }}
             
       - name: Docker Build and push for HotelRoom
         uses: docker/build-push-action@v4
@@ -73,4 +63,14 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/hotelroom:latest
             ghcr.io/${{ github.repository }}/hotelroom:${{ github.ref_name }}
+            
+      - name: Docker Build and push for CustomerCenter
+        uses: docker/build-push-action@v4
+        with:
+          context: ./customerCenter
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/customercenter:latest
+            ghcr.io/${{ github.repository }}/customercenter:${{ github.ref_name }}
             

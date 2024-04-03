@@ -23,7 +23,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
 
-  point:
+  reserve:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -34,10 +34,10 @@ services:
       - 8082:8082
     working_dir: /usr/src
     volumes:
-      - ./point:/usr/src
+      - ./reserve:/usr/src
       - ./maven-repo:/root/.m2
       
-  reserve:
+  clean:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -48,21 +48,7 @@ services:
       - 8083:8083
     working_dir: /usr/src
     volumes:
-      - ./reserve:/usr/src
-      - ./maven-repo:/root/.m2
-      
-  notify:
-    depends_on: 
-      - kafka
-    image: adoptopenjdk/maven-openjdk11:latest
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-    command: mvn spring-boot:run
-    ports:
-      - 8084:8084
-    working_dir: /usr/src
-    volumes:
-      - ./notify:/usr/src
+      - ./clean:/usr/src
       - ./maven-repo:/root/.m2
       
   hotelRoom:
@@ -73,9 +59,23 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     command: mvn spring-boot:run
     ports:
-      - 8085:8085
+      - 8084:8084
     working_dir: /usr/src
     volumes:
       - ./hotelRoom:/usr/src
+      - ./maven-repo:/root/.m2
+      
+  customerCenter:
+    depends_on: 
+      - kafka
+    image: adoptopenjdk/maven-openjdk11:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    command: mvn spring-boot:run
+    ports:
+      - 8085:8085
+    working_dir: /usr/src
+    volumes:
+      - ./customerCenter:/usr/src
       - ./maven-repo:/root/.m2
       

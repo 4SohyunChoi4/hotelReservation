@@ -6,7 +6,13 @@
 
         <v-card-text>
             <div>
-                <String label="RoomId" v-model="item.roomId" :editMode="editMode" @change="change" />
+                <String label="CleanStatus" v-model="item.cleanStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="RoomId" v-model="item.roomId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

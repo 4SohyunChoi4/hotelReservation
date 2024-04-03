@@ -20,10 +20,10 @@ cd /bin
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
-- point
 - reserve
-- notify
+- clean
 - hotelRoom
+- customerCenter
 
 
 ## Run API Gateway (Spring Gateway)
@@ -33,21 +33,20 @@ mvn spring-boot:run
 ```
 
 ## Test by API
-- point
-```
- http :8088/points id="id" point="point" 
-```
 - reserve
 ```
  http :8088/reserves id="id" roomType="roomType" status="status" roomId="roomId" 
 ```
-- notify
+- clean
 ```
- http :8088/notifies id="id" 
+ http :8088/cleans id="id" cleanStatus="cleanStatus" roomId="roomId" customerId="customerId" 
 ```
 - hotelRoom
 ```
  http :8088/hotelRooms id="id" roomQty="roomQty" 
+```
+- customerCenter
+```
 ```
 
 

@@ -12,7 +12,9 @@ import lombok.*;
 public class RoomCleaned extends AbstractEvent {
 
     private Long id;
-    private String roomId;
+    private String cleanStatus;
+    private Long roomId;
+    private Long customerId;
 
     public RoomCleaned(Clean aggregate) {
         super(aggregate);

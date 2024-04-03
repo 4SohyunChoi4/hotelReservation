@@ -1,7 +1,6 @@
 package hotelreservation.domain;
 
 import hotelreservation.CleanApplication;
-import hotelreservation.domain.RoomCleanCancelled;
 import hotelreservation.domain.RoomCleaned;
 import java.time.LocalDate;
 import java.util.Date;
@@ -19,15 +18,16 @@ public class Clean {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String roomId;
+    private String cleanStatus;
+
+    private Long roomId;
+
+    private Long customerId;
 
     @PostPersist
     public void onPostPersist() {
         RoomCleaned roomCleaned = new RoomCleaned(this);
         roomCleaned.publishAfterCommit();
-
-        RoomCleanCancelled roomCleanCancelled = new RoomCleanCancelled(this);
-        roomCleanCancelled.publishAfterCommit();
     }
 
     public static CleanRepository repository() {
@@ -38,15 +38,13 @@ public class Clean {
     }
 
     //<<< Clean Arch / Port Method
-    public static void cleantheroom(HotelReserved hotelReserved) {
+    public static void cleanTheRoom(HotelReserved hotelReserved) {
         //implement business logic here:
 
         /** Example 1:  new item 
         Clean clean = new Clean();
         repository().save(clean);
 
-        RoomCleaned roomCleaned = new RoomCleaned(clean);
-        roomCleaned.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -56,8 +54,6 @@ public class Clean {
             clean // do something
             repository().save(clean);
 
-            RoomCleaned roomCleaned = new RoomCleaned(clean);
-            roomCleaned.publishAfterCommit();
 
          });
         */

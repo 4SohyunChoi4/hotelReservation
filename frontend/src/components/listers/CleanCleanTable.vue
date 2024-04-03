@@ -67,7 +67,9 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "cleanStatus", value: "cleanStatus" },
                     { text: "roomId", value: "roomId" },
+                    { text: "customerId", value: "customerId" },
                 ],
             clean : [],
             newValue: {},
@@ -85,7 +87,9 @@
             this.values = temp.data._embedded.cleans;
 
             this.newValue = {
-                'roomId': '',
+                'cleanStatus': '',
+                'roomId': 0,
+                'customerId': 0,
             }
         },
         methods: {

@@ -25,30 +25,6 @@ public class Notify {
     }
 
     //<<< Clean Arch / Port Method
-    public static void notifyToUser(HotelCancelled hotelCancelled) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Notify notify = new Notify();
-        repository().save(notify);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(hotelCancelled.get???()).ifPresent(notify->{
-            
-            notify // do something
-            repository().save(notify);
-
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
     public static void notifyToUser(HotelReserved hotelReserved) {
         //implement business logic here:
 
@@ -61,6 +37,30 @@ public class Notify {
         /** Example 2:  finding and process
         
         repository().findById(hotelReserved.get???()).ifPresent(notify->{
+            
+            notify // do something
+            repository().save(notify);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void notifyToUser(HotelCancelled hotelCancelled) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Notify notify = new Notify();
+        repository().save(notify);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(hotelCancelled.get???()).ifPresent(notify->{
             
             notify // do something
             repository().save(notify);

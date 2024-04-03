@@ -27,16 +27,16 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='HotelReserved'"
     )
-    public void wheneverHotelReserved_Cleantheroom(
+    public void wheneverHotelReserved_CleanTheRoom(
         @Payload HotelReserved hotelReserved
     ) {
         HotelReserved event = hotelReserved;
         System.out.println(
-            "\n\n##### listener Cleantheroom : " + hotelReserved + "\n\n"
+            "\n\n##### listener CleanTheRoom : " + hotelReserved + "\n\n"
         );
 
         // Sample Logic //
-        Clean.cleantheroom(event);
+        Clean.cleanTheRoom(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor
