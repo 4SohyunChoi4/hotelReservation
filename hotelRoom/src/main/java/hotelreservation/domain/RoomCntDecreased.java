@@ -12,6 +12,7 @@ import lombok.*;
 public class RoomCntDecreased extends AbstractEvent {
 
     private Long id;
+    private Long roomQty;
 
     public RoomCntDecreased(HotelRoom aggregate) {
         super(aggregate);

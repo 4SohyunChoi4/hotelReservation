@@ -12,6 +12,8 @@ import lombok.*;
 public class OutOfStock extends AbstractEvent {
 
     private Long id;
+    private Long roomQty;
+    private String reserveId;
 
     public OutOfStock(HotelRoom aggregate) {
         super(aggregate);
