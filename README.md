@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/62393680/storming/1e62c2651420c1b8a597b310e50c33e7
+www.msaez.io/#/62393680/storming/hotelreservation
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -23,7 +23,7 @@ See the README.md files inside the each microservices directory:
 - point
 - reserve
 - notify
-- clean
+- hotelRoom
 
 
 ## Run API Gateway (Spring Gateway)
@@ -35,19 +35,19 @@ mvn spring-boot:run
 ## Test by API
 - point
 ```
- http :8088/points id="id" userId="userId" point="point" 
+ http :8088/points id="id" point="point" 
 ```
 - reserve
 ```
- http :8088/reserves id="id" roomId="roomId" roomQty="roomQty" 
+ http :8088/reserves id="id" roomType="roomType" status="status" 
 ```
 - notify
 ```
  http :8088/notifies id="id" 
 ```
-- clean
+- hotelRoom
 ```
- http :8088/cleans id="id" roomId="roomId" 
+ http :8088/hotelRooms id="id" roomQty="roomQty" 
 ```
 
 

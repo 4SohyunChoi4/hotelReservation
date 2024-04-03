@@ -25,34 +25,18 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='HotelReserved'"
+        condition = "headers['type']=='OutOfStock'"
     )
-    public void wheneverHotelReserved_UpdateRoomQty(
-        @Payload HotelReserved hotelReserved
+    public void wheneverOutOfStock_UpdateStatus(
+        @Payload OutOfStock outOfStock
     ) {
-        HotelReserved event = hotelReserved;
+        OutOfStock event = outOfStock;
         System.out.println(
-            "\n\n##### listener UpdateRoomQty : " + hotelReserved + "\n\n"
+            "\n\n##### listener UpdateStatus : " + outOfStock + "\n\n"
         );
 
         // Sample Logic //
-        Reserve.updateRoomQty(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='HotelCancelled'"
-    )
-    public void wheneverHotelCancelled_UpdateRoomQty(
-        @Payload HotelCancelled hotelCancelled
-    ) {
-        HotelCancelled event = hotelCancelled;
-        System.out.println(
-            "\n\n##### listener UpdateRoomQty : " + hotelCancelled + "\n\n"
-        );
-
-        // Sample Logic //
-        Reserve.updateRoomQty(event);
+        Reserve.updateStatus(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

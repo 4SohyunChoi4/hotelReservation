@@ -65,7 +65,7 @@ services:
       - ./notify:/usr/src
       - ./maven-repo:/root/.m2
       
-  clean:
+  hotelRoom:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -76,6 +76,6 @@ services:
       - 8085:8085
     working_dir: /usr/src
     volumes:
-      - ./clean:/usr/src
+      - ./hotelRoom:/usr/src
       - ./maven-repo:/root/.m2
       

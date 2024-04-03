@@ -67,8 +67,8 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "roomId", value: "roomId" },
-                    { text: "roomQty", value: "roomQty" },
+                    { text: "roomType", value: "roomType" },
+                    { text: "status", value: "status" },
                 ],
             reserve : [],
             newValue: {},
@@ -86,8 +86,8 @@
             this.values = temp.data._embedded.reserves;
 
             this.newValue = {
-                'roomId': '',
-                'roomQty': 0,
+                'roomType': '',
+                'status': '',
             }
         },
         methods: {

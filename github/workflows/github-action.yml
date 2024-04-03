@@ -32,7 +32,7 @@ jobs:
           mvn clean package -f ./point/pom.xml
           mvn clean package -f ./reserve/pom.xml
           mvn clean package -f ./notify/pom.xml
-          mvn clean package -f ./clean/pom.xml
+          mvn clean package -f ./hotelRoom/pom.xml
 
       - name: Docker Build and push for Point
         uses: docker/build-push-action@v4
@@ -64,13 +64,13 @@ jobs:
             ghcr.io/${{ github.repository }}/notify:latest
             ghcr.io/${{ github.repository }}/notify:${{ github.ref_name }}
             
-      - name: Docker Build and push for Clean
+      - name: Docker Build and push for HotelRoom
         uses: docker/build-push-action@v4
         with:
-          context: ./clean
+          context: ./hotelRoom
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/clean:latest
-            ghcr.io/${{ github.repository }}/clean:${{ github.ref_name }}
+            ghcr.io/${{ github.repository }}/hotelroom:latest
+            ghcr.io/${{ github.repository }}/hotelroom:${{ github.ref_name }}
             

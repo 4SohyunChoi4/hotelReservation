@@ -14,8 +14,8 @@ import ReserveReserveDetail from "./components/listers/ReserveReserveDetail"
 import NotifyNotifyManager from "./components/listers/NotifyNotifyCards"
 import NotifyNotifyDetail from "./components/listers/NotifyNotifyDetail"
 
-import CleanCleanManager from "./components/listers/CleanCleanCards"
-import CleanCleanDetail from "./components/listers/CleanCleanDetail"
+import HotelRoomHotelRoomManager from "./components/listers/HotelRoomHotelRoomCards"
+import HotelRoomHotelRoomDetail from "./components/listers/HotelRoomHotelRoomDetail"
 
 
 export default new Router({
@@ -56,14 +56,14 @@ export default new Router({
             },
 
             {
-                path: '/cleans/cleans',
-                name: 'CleanCleanManager',
-                component: CleanCleanManager
+                path: '/hotelRooms/hotelRooms',
+                name: 'HotelRoomHotelRoomManager',
+                component: HotelRoomHotelRoomManager
             },
             {
-                path: '/cleans/cleans/:id',
-                name: 'CleanCleanDetail',
-                component: CleanCleanDetail
+                path: '/hotelRooms/hotelRooms/:id',
+                name: 'HotelRoomHotelRoomDetail',
+                component: HotelRoomHotelRoomDetail
             },
 
 

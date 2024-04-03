@@ -25,22 +25,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='HotelReserved'"
-    )
-    public void wheneverHotelReserved_NotifyToUser(
-        @Payload HotelReserved hotelReserved
-    ) {
-        HotelReserved event = hotelReserved;
-        System.out.println(
-            "\n\n##### listener NotifyToUser : " + hotelReserved + "\n\n"
-        );
-
-        // Sample Logic //
-        Notify.notifyToUser(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='HotelCancelled'"
     )
     public void wheneverHotelCancelled_NotifyToUser(
@@ -49,6 +33,22 @@ public class PolicyHandler {
         HotelCancelled event = hotelCancelled;
         System.out.println(
             "\n\n##### listener NotifyToUser : " + hotelCancelled + "\n\n"
+        );
+
+        // Sample Logic //
+        Notify.notifyToUser(event);
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='HotelReserved'"
+    )
+    public void wheneverHotelReserved_NotifyToUser(
+        @Payload HotelReserved hotelReserved
+    ) {
+        HotelReserved event = hotelReserved;
+        System.out.println(
+            "\n\n##### listener NotifyToUser : " + hotelReserved + "\n\n"
         );
 
         // Sample Logic //

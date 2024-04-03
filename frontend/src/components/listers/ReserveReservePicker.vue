@@ -15,10 +15,10 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                RoomId :  {{item.roomId }}
+                                RoomType :  {{item.roomType }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                RoomQty :  {{item.roomQty }}
+                                Status :  {{item.status }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

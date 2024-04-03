@@ -16,8 +16,8 @@
         </v-card-title >        
 
         <v-card-text>
-            <String label="RoomId" v-model="value.roomId" :editMode="editMode" :inputUI="''"/>
-            <Number label="RoomQty" v-model="value.roomQty" :editMode="editMode" :inputUI="''"/>
+            <String label="RoomType" v-model="value.roomType" :editMode="editMode" :inputUI="''"/>
+            <String label="Status" v-model="value.status" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -37,6 +37,13 @@
                     @click="save"
                 >
                     Reserve
+                </v-btn>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    Cancel
                 </v-btn>
                 <v-btn
                     color="primary"

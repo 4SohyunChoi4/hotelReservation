@@ -12,8 +12,8 @@ import lombok.*;
 public class HotelCancelled extends AbstractEvent {
 
     private Long id;
-    private String roomId;
-    private Long roomQty;
+    private String roomType;
+    private String status;
 
     public HotelCancelled(Reserve aggregate) {
         super(aggregate);

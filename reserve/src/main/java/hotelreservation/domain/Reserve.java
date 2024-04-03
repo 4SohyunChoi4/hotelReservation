@@ -19,9 +19,9 @@ public class Reserve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String roomId;
+    private String roomType;
 
-    private Long roomQty;
+    private String status;
 
     @PostPersist
     public void onPostPersist() {
@@ -40,7 +40,7 @@ public class Reserve {
     }
 
     //<<< Clean Arch / Port Method
-    public static void updateRoomQty(HotelReserved hotelReserved) {
+    public static void updateStatus(OutOfStock outOfStock) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -51,31 +51,7 @@ public class Reserve {
 
         /** Example 2:  finding and process
         
-        repository().findById(hotelReserved.get???()).ifPresent(reserve->{
-            
-            reserve // do something
-            repository().save(reserve);
-
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public static void updateRoomQty(HotelCancelled hotelCancelled) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Reserve reserve = new Reserve();
-        repository().save(reserve);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(hotelCancelled.get???()).ifPresent(reserve->{
+        repository().findById(outOfStock.get???()).ifPresent(reserve->{
             
             reserve // do something
             repository().save(reserve);

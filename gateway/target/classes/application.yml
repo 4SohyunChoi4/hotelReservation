@@ -21,10 +21,10 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path=/notifies/**, 
-        - id: clean
+        - id: hotelRoom
           uri: http://localhost:8085
           predicates:
-            - Path=/cleans/**, 
+            - Path=/hotelRooms/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -61,10 +61,10 @@ spring:
           uri: http://notify:8080
           predicates:
             - Path=/notifies/**, 
-        - id: clean
-          uri: http://clean:8080
+        - id: hotelRoom
+          uri: http://hotelRoom:8080
           predicates:
-            - Path=/cleans/**, 
+            - Path=/hotelRooms/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

@@ -123,22 +123,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: clean
+  name: hotelRoom
   labels:
-    app: clean
+    app: hotelRoom
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clean
+      app: hotelRoom
   template:
     metadata:
       labels:
-        app: clean
+        app: hotelRoom
     spec:
       containers:
-        - name: clean
-          image: username/clean:latest
+        - name: hotelRoom
+          image: username/hotelRoom:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -216,13 +216,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: clean
+  name: hotelRoom
   labels:
-    app: clean
+    app: hotelRoom
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: clean
+    app: hotelRoom
 

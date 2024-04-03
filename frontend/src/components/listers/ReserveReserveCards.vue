@@ -109,8 +109,8 @@
             me.values = temp.data._embedded.reserves;
             
             me.newValue = {
-                'roomId': '',
-                'roomQty': 0,
+                'roomType': '',
+                'status': '',
             }
         },
         methods:{

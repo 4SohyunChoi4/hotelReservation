@@ -72,13 +72,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="cleans"
-                        to="/cleans/cleans"
+                        key="hotelRooms"
+                        to="/hotelRooms/hotelRooms"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Clean
+                        HotelRoom
                     </v-list-item>
 
 
@@ -182,10 +182,10 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Clean', 
+                title: 'HotelRoom', 
                 description: '', 
-                key: 'cleans', 
-                route: '/cleans/cleans',
+                key: 'hotelRooms', 
+                route: '/hotelRooms/hotelRooms',
                 ImageUrl: '',
             },
             
